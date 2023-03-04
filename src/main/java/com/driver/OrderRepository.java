@@ -1,10 +1,11 @@
 package com.driver;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Component
+@Repository
 public class OrderRepository
 {
     private Map<String, Order> orderDb;
