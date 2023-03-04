@@ -100,11 +100,11 @@ public class OrderRepository
     {
         partnerDb.remove(partnerId);
 
+        List<String> listOfOrders = partnerOrderDb.get(partnerId);
         partnerOrderDb.remove(partnerId);
 
-        for(String orderId : orderPartnerDb.keySet())
-        {
-            if(orderPartnerDb.get(orderId).equals(partnerId)) orderPartnerDb.remove(orderId);
+        for(String orderId: listOfOrders){
+            orderPartnerDb.remove(orderId);
         }
     }
 
